@@ -19,12 +19,14 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer sprite;
     private bool canJump = true;
     private BoxCollider2D collider;
+    public GameOver gameOver;
     private bool inLadder = false;
     private Animator animator;
     public static int lives = 2;
     // Start is called before the first frame update
     void Start()
     {
+        gameOver.Lose();
         this.rigid = GetComponent<Rigidbody2D>();
         this.sprite = GetComponent<SpriteRenderer>();
         this.collider = GetComponent<BoxCollider2D>();
@@ -67,16 +69,11 @@ public class PlayerController : MonoBehaviour
         Debug.Log(lives);
         if (lives < 0) {
             Debug.Log("lose");
+            gameOver.Lose();
+            Destroy(gameObject);
         }
         lifeText.text = "M\n"+lives.ToString();
     }
-    /*void OnCollisionStay2D(Collision2D other) {
-        if (other.gameObject.tag == "Ladder") {
-        if (Input.GetKey(this.upKey)) {
-                rigid.velocity = new Vector2(rigid.velocity.x, climbForce);
-        }
-        }
-    }*/
     void OnTriggerStay2D(Collider2D col)
     {
         if (col.gameObject.tag == "Ladder")
