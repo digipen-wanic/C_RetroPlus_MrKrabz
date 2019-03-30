@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 10;
     public float jumpTime = 1;
     public float jumpForce = 10;
+    public Text lifeText;
     private float jumpTimer = 1;
     private Rigidbody2D rigid;
     private SpriteRenderer sprite;
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
         this.sprite = GetComponent<SpriteRenderer>();
         this.collider = GetComponent<BoxCollider2D>();
         this.animator = GetComponent<Animator>();
+        lifeText.text = "M\n"+lives.ToString();
     }
 
     // Update is called once per frame
@@ -62,8 +64,9 @@ public class PlayerController : MonoBehaviour
         if (lives < 0) {
             Debug.Log("lose");
         }
+        lifeText.text = "M\n"+lives.ToString();
     }
-    void OnCollisionStay(Collision2D other) {
+    void OnCollisionStay2D(Collision2D other) {
         if (other.gameObject.tag == "Ladder") {
         if (Input.GetKey(this.upKey)) {
         }
