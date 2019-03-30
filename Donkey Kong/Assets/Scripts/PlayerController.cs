@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private bool canJump = true;
     private BoxCollider2D collider;
     private Animator animator;
+    public static int lives = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +54,13 @@ public class PlayerController : MonoBehaviour
             canJump = false;
             rigid.velocity = new Vector2(rigid.velocity.x, jumpForce);
             jumpTimer = jumpTime;
+        }
+    }
+    public void ModLives(int to) {
+        lives += to;
+        Debug.Log(lives);
+        if (lives < 0) {
+            Debug.Log("lose");
         }
     }
     void OnCollisionEnter2D(Collision2D collision)
