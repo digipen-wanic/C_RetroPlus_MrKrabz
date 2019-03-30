@@ -63,6 +63,12 @@ public class PlayerController : MonoBehaviour
             Debug.Log("lose");
         }
     }
+    void OnCollisionStay(Collision2D other) {
+        if (other.gameObject.tag == "Ladder") {
+        if (Input.GetKey(this.upKey)) {
+        }
+        }
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (!canJump && collision.gameObject.tag == "Platform" && collision.transform.position.y < rigid.transform.position.y)
