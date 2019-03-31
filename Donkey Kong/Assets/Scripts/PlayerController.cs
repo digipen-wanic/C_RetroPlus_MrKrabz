@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameOver.Lose();
         this.rigid = GetComponent<Rigidbody2D>();
         this.sprite = GetComponent<SpriteRenderer>();
         this.collider = GetComponent<BoxCollider2D>();
