@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public KeyCode leftKey;
@@ -69,9 +70,13 @@ public class PlayerController : MonoBehaviour
         if (lives < 0) {
             Debug.Log("lose");
             gameOver.Lose();
-            Destroy(gameObject);
+            Destroy(this.gameObject);
+        } else {
+            if (to < 0) {
+              SceneManager.LoadScene("BaseGame");
+            }
+            lifeText.text = "M\n"+lives.ToString();
         }
-        lifeText.text = "M\n"+lives.ToString();
     }
     void OnTriggerStay2D(Collider2D col)
     {

@@ -8,11 +8,12 @@ public class GameOver : MonoBehaviour
     public Text gameOverText;
     private SpriteRenderer boxSprite;
     public float endTime = 2.0f;
-    private float endTimer = 0;
+    public float endTimer = 0;
     // Start is called before the first frame update
     void Start()
     {
         boxSprite = GetComponentInChildren<SpriteRenderer>();
+        boxSprite.enabled = false;
     }
 
     // Update is called once per frame

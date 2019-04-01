@@ -23,7 +23,6 @@ public class Barrel : MonoBehaviour
     		going *= -1;
     	} else if (col.gameObject.tag == "Player") {
     		col.gameObject.GetComponent<PlayerController>().ModLives(-1);
-    		SceneManager.LoadScene("BaseGame");
-    	}
+    		    	}
     }
 }
