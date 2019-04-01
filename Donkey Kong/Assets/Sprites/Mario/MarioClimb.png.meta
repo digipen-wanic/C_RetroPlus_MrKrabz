@@ -8,6 +8,7 @@ TextureImporter:
     21300006: MarioClimb_3
     21300008: MarioClimb_4
     21300010: MarioClimb_5
+    21300012: MarioClimb_6
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -104,7 +105,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f82c035b77de2034b928e6a6dd50f1ad
+      spriteID: 97d94aa120e64ca4bb63be467bde2152
       vertices: []
       indices: 
       edges: []
@@ -124,7 +125,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f78eaf743ad8d24f82eedd48335906f
+      spriteID: 099056ed57cd845448f3dbd7180b8dcb
       vertices: []
       indices: 
       edges: []
@@ -133,8 +134,8 @@ TextureImporter:
       name: MarioClimb_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 18
+        x: 36
+        y: 36
         width: 18
         height: 18
       alignment: 0
@@ -144,7 +145,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0511347506687ce4a9b5965ef2788f1d
+      spriteID: a1c1db5993bb06840af5f5b97779b45a
       vertices: []
       indices: 
       edges: []
@@ -153,6 +154,26 @@ TextureImporter:
       name: MarioClimb_3
       rect:
         serializedVersion: 2
+        x: 0
+        y: 18
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a55cd0da4072fe46809dfce451d3a8d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarioClimb_4
+      rect:
+        serializedVersion: 2
         x: 18
         y: 18
         width: 18
@@ -164,13 +185,33 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd14792fa466b71408e97f618316f071
+      spriteID: aa8c5d21b4600ac4c898238976a00ca7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioClimb_4
+      name: MarioClimb_5
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 18
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a566af1b7adc446ad8c89f6ec422b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarioClimb_6
       rect:
         serializedVersion: 2
         x: 0
@@ -184,27 +225,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dea5af1e0e74e4f4d85e763e6a70978e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MarioClimb_5
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 0
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22bb8510db306b54eb1e9e962ecb075b
+      spriteID: 6695da6715289194c9c4aa9b4b3ce42d
       vertices: []
       indices: 
       edges: []
@@ -212,7 +233,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 57147b148558b614fb4cc257633357ce
+    spriteID: ec0a98d9330a03b4f841df49061a4bb1
     vertices: []
     indices: 
     edges: []

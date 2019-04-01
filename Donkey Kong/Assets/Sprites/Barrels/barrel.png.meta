@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: d4206e0cc0d7a654fb3f3c20a25e6468
+guid: 19f2c3e959809974b9099a11e8af111c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: MarioRun_0
-    21300002: MarioRun_1
-    21300004: MarioRun_2
-    21300006: MarioRun_3
+    21300000: barrel_0
+    21300002: barrel_1
+    21300004: barrel_2
+    21300006: barrel_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -88,13 +88,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MarioRun_0
+      name: barrel_0
       rect:
         serializedVersion: 2
         x: 1
-        y: 19
-        width: 16
-        height: 16
+        y: 13
+        width: 12
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -102,19 +102,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cda41d1121b9fd46b06680b61dae71e
+      spriteID: 26721fc8ed2a5694aba385caee040806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioRun_1
+      name: barrel_1
       rect:
         serializedVersion: 2
-        x: 19
-        y: 19
-        width: 16
-        height: 16
+        x: 15
+        y: 13
+        width: 12
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,19 +122,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0f980c35a1c78247b7f914b34d70abc
+      spriteID: 197c60d9a5fda4746ad865609fdedc2b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioRun_2
+      name: barrel_2
       rect:
         serializedVersion: 2
         x: 1
         y: 1
-        width: 16
-        height: 16
+        width: 12
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,19 +142,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf16dcacd55f3ee4a8befcd26b62e3da
+      spriteID: a7268ad8f34881e4d9ac9c6ca4f9cad9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioRun_3
+      name: barrel_3
       rect:
         serializedVersion: 2
-        x: 19
+        x: 15
         y: 1
-        width: 16
-        height: 16
+        width: 12
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,7 +162,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bbe25457d7438e4a911e83b8d3d5958
+      spriteID: fde3775fbe5cef04a8d8ff581ccbca6d
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0fdb4772c9ec43f449fbd5c2bdeca17f
+    spriteID: e2e143312c768c34b99dbe0d8a075f63
     vertices: []
     indices: 
     edges: []
