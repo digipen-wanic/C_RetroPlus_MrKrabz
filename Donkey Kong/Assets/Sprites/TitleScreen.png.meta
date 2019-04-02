@@ -1,17 +1,9 @@
 fileFormatVersion: 2
-guid: 44d904a8c090b6db59fea1f1e570f674
+guid: 0f868d9682efb94eab450c34f444191a
 TextureImporter:
-<<<<<<< HEAD
   fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 9
-=======
-  fileIDToRecycleName:
-    21300000: Pauline_0
-    21300002: Pauline_1
-  externalObjects: {}
-  serializedVersion: 7
->>>>>>> 092d0908ce7e600d8a8c4da5957f643d8a384054
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -39,11 +31,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
     filterMode: -1
-=======
-    filterMode: 0
->>>>>>> 092d0908ce7e600d8a8c4da5957f643d8a384054
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -52,11 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
   spriteMode: 1
-=======
-  spriteMode: 2
->>>>>>> 092d0908ce7e600d8a8c4da5957f643d8a384054
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -85,70 +69,13 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-<<<<<<< HEAD
   spriteSheet:
     serializedVersion: 2
     sprites: []
-=======
-  - serializedVersion: 2
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  spriteSheet:
-    serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Pauline_0
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 1
-        width: 16
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4abfc10d60757c4fa5d4b9f20ad4bdc
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pauline_1
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 1
-        width: 16
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce6e46a593397214b8a02c6c6f1311ee
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
->>>>>>> 092d0908ce7e600d8a8c4da5957f643d8a384054
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 650c66bf3b57db91fb76a7cfb92055c0
+    spriteID: bcad36a8be877683d8a9f17dd9e1b7b0
     vertices: []
     indices: 
     edges: []

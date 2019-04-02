@@ -7,6 +7,10 @@ TagManager:
   - Platform
   - Border
   - Ladder
+<<<<<<< HEAD
+=======
+  - Hammer
+>>>>>>> 092d0908ce7e600d8a8c4da5957f643d8a384054
   layers:
   - Default
   - TransparentFX

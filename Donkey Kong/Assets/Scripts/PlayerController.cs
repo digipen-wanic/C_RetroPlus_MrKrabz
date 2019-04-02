@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public KeyCode leftKey;
@@ -23,6 +24,10 @@ public class PlayerController : MonoBehaviour
     private bool inLadder = false;
     private Animator animator;
     public static int lives = 2;
+<<<<<<< HEAD
+=======
+    private Hammer hammer;
+>>>>>>> 092d0908ce7e600d8a8c4da5957f643d8a384054
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +35,10 @@ public class PlayerController : MonoBehaviour
         this.sprite = GetComponent<SpriteRenderer>();
         this.collider = GetComponent<BoxCollider2D>();
         this.animator = GetComponent<Animator>();
+<<<<<<< HEAD
+=======
+        this.hammer = GetComponentInChildren<Hammer>();
+>>>>>>> 092d0908ce7e600d8a8c4da5957f643d8a384054
         lifeText.text = "M\n"+lives.ToString();
     }
 
@@ -69,9 +78,19 @@ public class PlayerController : MonoBehaviour
         if (lives < 0) {
             Debug.Log("lose");
             gameOver.Lose();
+<<<<<<< HEAD
             Destroy(gameObject);
         }
         lifeText.text = "M\n"+lives.ToString();
+=======
+            Destroy(this.gameObject);
+        } else {
+            if (to < 0) {
+              SceneManager.LoadScene("BaseGame");
+            }
+            lifeText.text = "M\n"+lives.ToString();
+        }
+>>>>>>> 092d0908ce7e600d8a8c4da5957f643d8a384054
     }
     void OnTriggerStay2D(Collider2D col)
     {
@@ -104,7 +123,15 @@ public class PlayerController : MonoBehaviour
         {
             canJump = true;
         }
+<<<<<<< HEAD
        
+=======
+       if (collision.gameObject.tag == "Hammer")
+        {
+            hammer.Enable();
+            Destroy(collision.gameObject);
+        }
+>>>>>>> 092d0908ce7e600d8a8c4da5957f643d8a384054
         foreach (ContactPoint2D cp in collision.contacts)
         {
             if (collision.gameObject.tag == "Platform")
