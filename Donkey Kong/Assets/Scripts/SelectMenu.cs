@@ -9,6 +9,11 @@ public class SelectMenu : MonoBehaviour {
     public KeyCode downKey;
     public KeyCode pickKey;
     public Text[] picks;
+    public float startTime;
+    private float startTimer;
+    private bool started = false;
+    public AudioSource selectMusic;
+    public AudioSource mainMusic;
 	// Use this for initialization
 	void Start () {
         picks = this.gameObject.GetComponentsInChildren<Text>();
@@ -16,9 +21,19 @@ public class SelectMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (started) {
+            startTimer -= Time.deltaTime;
+            if (startTimer <= 0) {
+                 SceneManager.LoadScene("BaseGame");
+
+            }
+        }
         if (Input.GetKeyDown(pickKey))
         {
-            SceneManager.LoadScene("BaseGame");
+            startTimer = startTime;
+            started = true;
+            selectMusic.Play();
+            mainMusic.Stop();
         } else 
         if (Input.GetKeyDown(upKey))
         {
