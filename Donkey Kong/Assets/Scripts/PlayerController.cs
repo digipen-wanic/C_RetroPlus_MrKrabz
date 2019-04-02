@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public static int lives = 2;
     private Hammer hammer;
+    public SpriteRenderer hammerSprite;
+    public Transform hammerTransform;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
         this.animator = GetComponent<Animator>();
         this.hammer = GetComponentInChildren<Hammer>();
         lifeText.text = "M\n"+lives.ToString();
+        hammer.Disable();
     }
 
     // Update is called once per frame
@@ -42,12 +45,17 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(this.leftKey))
         {
+            Vector3 lScale = new Vector3(-1,1,1);
             this.sprite.flipX = false;
+            hammerTransform.localScale = lScale;
+
             rigid.velocity = new Vector2(-speed, rigid.velocity.y);
             animator.SetInteger("State", 1);
         }
         else if (Input.GetKey(this.rightKey))
         {
+           Vector3 lScale = new Vector3(1,1,1);
+            hammerTransform.localScale = lScale;
             this.sprite.flipX = true;
             rigid.velocity = new Vector2(speed, rigid.velocity.y);
             animator.SetInteger("State", 1);

@@ -1,7 +1,9 @@
 fileFormatVersion: 2
-guid: 44b3af1ed25557b49aef5bbb40fc2300
+guid: 16cf2f6558d9a574697ca74c979713cd
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: MarioHammer_0
+    21300002: MarioHammer_1
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -82,11 +84,51 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: MarioHammer_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 33
+        width: 12
+        height: 29
+      alignment: 9
+      pivot: {x: 0.500078, y: 0.275765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d4bb7b579c5f048acab5aa1f2ad2c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarioHammer_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 25
+        height: 16
+      alignment: 9
+      pivot: {x: 0.24127027, y: 0.5043433}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b18cd70ad179e4e8c820f7d86f3bf4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 17037abc68409884e93d2a5cbd2e6fb8
+    spriteID: df9e627b89cf39744ac32459cfe789d2
     vertices: []
     indices: 
     edges: []
