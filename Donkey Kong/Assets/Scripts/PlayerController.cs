@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private bool inLadder = false;
     private Animator animator;
     public static int lives = 2;
+    private Hammer hammer;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
         this.sprite = GetComponent<SpriteRenderer>();
         this.collider = GetComponent<BoxCollider2D>();
         this.animator = GetComponent<Animator>();
+        this.hammer = GetComponentInChildren<Hammer>();
         lifeText.text = "M\n"+lives.ToString();
     }
 
@@ -109,7 +111,11 @@ public class PlayerController : MonoBehaviour
         {
             canJump = true;
         }
-       
+       if (collision.gameObject.tag == "Hammer")
+        {
+            hammer.Enable();
+            Destroy(collision.gameObject);
+        }
         foreach (ContactPoint2D cp in collision.contacts)
         {
             if (collision.gameObject.tag == "Platform")
