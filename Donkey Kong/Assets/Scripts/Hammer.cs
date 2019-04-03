@@ -7,7 +7,7 @@ public class Hammer : MonoBehaviour
     private PlayerController player;
     private BoxCollider2D collide;
     private SpriteRenderer sprite;
-    private SpriteRenderer parentSprite;
+    public SpriteRenderer parentSprite;
     public bool enabled = false;
     public float hTime = 13;
     private float hTimer = 0;
@@ -17,7 +17,6 @@ public class Hammer : MonoBehaviour
         player = GetComponentInParent<PlayerController>();
         sprite = GetComponent<SpriteRenderer>();
         collide = GetComponent<BoxCollider2D>();
-        parentSprite = GetComponentInParent<SpriteRenderer>();
         Disable();
     }
 
@@ -45,12 +44,14 @@ public class Hammer : MonoBehaviour
         sprite.enabled = true;
         collide.enabled = true;
         hTimer = hTime;
+        parentSprite.enabled = false;
     }
     public void Disable()
     {
         enabled = false;
         sprite.enabled = false;
         collide.enabled = false;
+        parentSprite.enabled = true;
 
     }
 }

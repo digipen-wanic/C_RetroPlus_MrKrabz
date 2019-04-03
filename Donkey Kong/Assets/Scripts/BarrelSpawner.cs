@@ -14,6 +14,7 @@ public class BarrelSpawner : MonoBehaviour
     private bool waited = false;
     private bool throwing = false;
     private Animator animator;
+    public Animator princessAnimator;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +40,7 @@ public class BarrelSpawner : MonoBehaviour
                 throwing = false;
    
                 Barrel barrel = Instantiate<Barrel>(barrelPrefab);
-                barrel.transform.position = new Vector2(-1.27f, 1.154f);
+                barrel.transform.position = new Vector2(-0.991f, 1.159f);
             }
         }
         if (waited)
@@ -52,6 +53,7 @@ public class BarrelSpawner : MonoBehaviour
                 animator.SetTrigger("ThrowBarrel");
                 throwing = true;
                 throwTimer = throwTime;
+                princessAnimator.SetTrigger("Dance");
             }
         }
     }

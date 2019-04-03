@@ -21,8 +21,6 @@ public class Barrel : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col) {
     	if (col.gameObject.tag == "Border") {
     		going *= -1;
-    	} else if (col.collider.tag == "Player" && col.enabled) {
-    		col.gameObject.GetComponent<PlayerController>().ModLives(-1);
-		}
+    	} 
     }
 }

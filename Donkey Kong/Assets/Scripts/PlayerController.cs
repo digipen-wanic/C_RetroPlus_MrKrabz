@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     public int decBonusBy = 100;
     public float decTime = 3;
     private float decTimer = 0;
+    public Animator hammerAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,12 +71,16 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKey(this.leftKey))
         {
-            Vector3 lScale = new Vector3(-1,1,1);
+            Vector3 lScale = new Vector3(-1, 1, 1);
             this.sprite.flipX = false;
             hammerTransform.localScale = lScale;
 
             rigid.velocity = new Vector2(-speed, rigid.velocity.y);
-            animator.SetInteger("State", 1);
+            if (canJump)
+            {
+                animator.SetInteger("State", 1);
+                hammerAnim.SetInteger("State", 1);
+            }
         }
         else if (Input.GetKey(this.rightKey))
         {
@@ -83,13 +88,20 @@ public class PlayerController : MonoBehaviour
             hammerTransform.localScale = lScale;
             this.sprite.flipX = true;
             rigid.velocity = new Vector2(speed, rigid.velocity.y);
-            animator.SetInteger("State", 1);
-
+            if (canJump)
+            {
+                animator.SetInteger("State", 1);
+                hammerAnim.SetInteger("State", 1);
+            }
         } 
         else
         {
             rigid.velocity = new Vector2(0, rigid.velocity.y);
-            animator.SetInteger("State", 0);
+            if (canJump)
+            {
+                animator.SetInteger("State", 0);
+                hammerAnim.SetInteger("State", 0);
+            }
 
         }
         if (Input.GetKeyDown(this.jumpKey) && canJump)
@@ -97,9 +109,10 @@ public class PlayerController : MonoBehaviour
             canJump = false;
             rigid.velocity = new Vector2(rigid.velocity.x, jumpForce);
             jumpTimer = jumpTime;
+            animator.SetInteger("State", 2);
+
         }
-         if (!canJump) {
-            animator.SetInteger("State", 2);   
+        if (!canJump) {
         }
     }
     public void ModLives(int to) {
