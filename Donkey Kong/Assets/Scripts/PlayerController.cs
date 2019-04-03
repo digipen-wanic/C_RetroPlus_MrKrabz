@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
     private float decTimer = 0;
     public Animator hammerAnim;
     public bool hasWhip = false;
+    public AudioSource winMusic;
+    public AudioSource finalMusic;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,26 +49,40 @@ public class PlayerController : MonoBehaviour
         this.collider = GetComponent<BoxCollider2D>();
         this.animator = GetComponent<Animator>();
         this.hammer = GetComponentInChildren<Hammer>();
-        lifeText.text = "M\n"+lives.ToString();
+        lifeText.text = "M\n" + lives.ToString();
         decTimer = decTime;
         hammer.Disable();
     }
-    public void IncScore(int points) {
+    public void IncScore(int points)
+    {
         score += points;
         scoreText.text = score.ToString("I-0000000");
-        if (score > highScore) {
+        if (score > highScore)
+        {
             highScore = score;
             highScoreText.text = score.ToString("TOP-000000");
         }
     }
-    public void Win() {
+    public void Win(bool final)
+    {
         IncScore(bonusPoints);
+        if (final)
+        {
+            finalMusic.Play();
+            SceneManager.LoadScene("MainMenu");
+        }
+        else
+        {
+            winMusic.Play();
+            SceneManager.LoadScene("PlusLevel");
+        }
     }
     // Update is called once per frame
     void Update()
     {
         decTimer -= Time.deltaTime;
-        if (decTimer <= 0) {
+        if (decTimer <= 0)
+        {
             bonusPoints -= decBonusBy;
             bonusText.text = bonusPoints.ToString("0000");
             decTimer = decTime;
@@ -86,7 +102,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetKey(this.rightKey))
         {
-           Vector3 lScale = new Vector3(1,1,1);
+            Vector3 lScale = new Vector3(1, 1, 1);
             hammerTransform.localScale = lScale;
             this.sprite.flipX = true;
             rigid.velocity = new Vector2(speed, rigid.velocity.y);
@@ -95,7 +111,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetInteger("State", 1);
                 hammerAnim.SetInteger("State", 1);
             }
-        } 
+        }
         else
         {
             rigid.velocity = new Vector2(0, rigid.velocity.y);
@@ -120,19 +136,24 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    public void ModLives(int to) {
+    public void ModLives(int to)
+    {
         lives += to;
         Debug.Log(lives);
-        if (lives < 0) {
+        if (lives < 0)
+        {
             Debug.Log("lose");
             gameOver.Lose();
             Destroy(this.gameObject);
-        } else {
-            if (to < 0) {
+        }
+        else
+        {
+            if (to < 0)
+            {
                 print("die");
-              SceneManager.LoadScene("BaseGame");
+                SceneManager.LoadScene("BaseGame");
             }
-            lifeText.text = "M\n"+lives.ToString();
+            lifeText.text = "M\n" + lives.ToString();
         }
     }
     void OnTriggerStay2D(Collider2D col)
@@ -142,7 +163,9 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(upKey))
             {
                 this.rigid.velocity = new Vector2(rigid.velocity.x, climbForce);
-            } else if (Input.GetKey(downKey) ){
+            }
+            else if (Input.GetKey(downKey))
+            {
                 this.rigid.velocity = new Vector2(rigid.velocity.x, -climbForce);
             }
             else
@@ -150,9 +173,9 @@ public class PlayerController : MonoBehaviour
                 this.rigid.velocity = new Vector2(rigid.velocity.x, 0);
             }
         }
-        
-        }
-        void OnTriggerExit2D(Collider2D other)
+
+    }
+    void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.tag == "Ladder")
         {
@@ -162,11 +185,19 @@ public class PlayerController : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "WinCollide")
+        {
+            Win(false);
+        }
+        else if (collision.gameObject.tag == "DoneCollide")
+        {
+            Win(true);
+        }
         if (!canJump && collision.gameObject.tag == "Platform" && collision.transform.position.y < rigid.transform.position.y)
         {
             canJump = true;
         }
-       if (collision.gameObject.tag == "Hammer")
+        if (collision.gameObject.tag == "Hammer")
         {
             hammer.Enable();
             Destroy(collision.gameObject);

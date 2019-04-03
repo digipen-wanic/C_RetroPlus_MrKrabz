@@ -11,6 +11,9 @@ TagManager:
   - PHammer
   - Barrel
   - Fireball
+  - Enemy
+  - Whip
+  - WinCollide
   layers:
   - Default
   - TransparentFX
