@@ -11,13 +11,14 @@ public class Hammer : MonoBehaviour
     public bool enabled = false;
     public float hTime = 13;
     private float hTimer = 0;
+    public AudioSource stageMusic;
+    public AudioSource hammerMusic;
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponentInParent<PlayerController>();
         sprite = GetComponent<SpriteRenderer>();
         collide = GetComponent<BoxCollider2D>();
-        Disable();
     }
 
     // Update is called once per frame
@@ -45,6 +46,8 @@ public class Hammer : MonoBehaviour
         collide.enabled = true;
         hTimer = hTime;
         parentSprite.enabled = false;
+        //stageMusic.Stop();
+        hammerMusic.Play();
     }
     public void Disable()
     {
@@ -52,6 +55,10 @@ public class Hammer : MonoBehaviour
         sprite.enabled = false;
         collide.enabled = false;
         parentSprite.enabled = true;
+        if (!stageMusic.isPlaying)
+        {
+            stageMusic.Play();
+        }
 
     }
 }

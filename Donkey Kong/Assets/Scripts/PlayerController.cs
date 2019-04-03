@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -124,6 +124,7 @@ public class PlayerController : MonoBehaviour
             Destroy(this.gameObject);
         } else {
             if (to < 0) {
+                print("die");
               SceneManager.LoadScene("BaseGame");
             }
             lifeText.text = "M\n"+lives.ToString();
