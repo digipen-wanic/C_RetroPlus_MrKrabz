@@ -68,7 +68,6 @@ public class PlayerController : MonoBehaviour
             bonusText.text = bonusPoints.ToString("0000");
             decTimer = decTime;
         }
-
         if (Input.GetKey(this.leftKey))
         {
             Vector3 lScale = new Vector3(-1,1,1);

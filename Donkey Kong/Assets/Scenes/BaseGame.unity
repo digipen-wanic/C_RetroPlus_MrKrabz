@@ -1609,18 +1609,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493151121}
   m_CullTransparentMesh: 0
---- !u!114 &494133742 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2077061450869358342, guid: be8aa75d0a86e5a20947b9ad0233e3dd,
-    type: 3}
-  m_PrefabInstance: {fileID: 2077061451323432680}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd7f1a06786eb4d47905e4def326fc76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &558979801
 GameObject:
   m_ObjectHideFlags: 0
@@ -4110,6 +4098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1204605832}
   - component: {fileID: 1204605831}
+  - component: {fileID: 1204605833}
   m_Layer: 0
   m_Name: OilTank
   m_TagString: Untagged
@@ -4179,6 +4168,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1204605833
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204605830}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 666cc241ba8932c3f9760849ac9f9072, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1209148828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4520,6 +4528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1279904842}
   - component: {fileID: 1279904841}
+  - component: {fileID: 1279904843}
   - component: {fileID: 1279904840}
   m_Layer: 0
   m_Name: DonkeyKong
@@ -4537,11 +4546,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1279904839}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f883956634f2f118a90f1658923ebf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 96c6dc5fbbb4437b3afb08d9f3471c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 2
-  barrelPrefab: {fileID: 494133742}
+  spawnInterval: 3
+  waitInterval: 3
+  throwTime: 1
+  barrelPrefab: {fileID: 2077061450869358342, guid: be8aa75d0a86e5a20947b9ad0233e3dd,
+    type: 3}
+  spawnTimer: 0
+  waitTimer: 0
+  throwTimer: 0
 --- !u!212 &1279904841
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4579,15 +4594,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300008, guid: adf94c1940ba4e345b9b0290b02998cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.4, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1279904842
@@ -4599,11 +4614,30 @@ Transform:
   m_GameObject: {fileID: 1279904839}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.726, y: 1.368, z: -0.010253906}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1279904843
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279904839}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 93b5f5227c29f98a9a99d9bbd8335032, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1295290249 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2220622701948936648, guid: bec0036975d959141b3741108c636bb9,
