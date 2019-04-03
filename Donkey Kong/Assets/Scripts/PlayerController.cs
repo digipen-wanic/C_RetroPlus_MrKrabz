@@ -16,14 +16,15 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10;
     public float climbForce = 5;
     public Text lifeText;
+    public float jumpThreshold = 1;
     private float jumpTimer = 1;
     private Rigidbody2D rigid;
     private SpriteRenderer sprite;
     private bool canJump = true;
-    private BoxCollider2D collider;
+    private new BoxCollider2D collider;
     public GameOver gameOver;
-    private bool inLadder = false;
     private Animator animator;
+    private bool inLadder = false;
     public static int lives = 2;
     private Hammer hammer;
     public SpriteRenderer hammerSprite;
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour
     public bool hasWhip = false;
     public AudioSource winMusic;
     public AudioSource finalMusic;
+    public AudioSource deathMusic;
     // Start is called before the first frame update
     void Start()
     {
@@ -80,6 +82,24 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject closest = this.gameObject;
+        float cDist = 1000;
+        GameObject[] list = GameObject.FindGameObjectsWithTag("Barrel");
+        for (int i = 0; i < list.Length; i++)
+        {
+            float dist = Mathf.Sqrt(Mathf.Pow(list[i].transform.position.x - rigid.transform.position.x, 2) + Mathf.Pow(list[i].transform.position.y - rigid.transform.position.y, 2));
+            if (dist < cDist)
+            {
+                closest = list[i];
+                cDist = dist;
+            }
+        }
+        if (closest.tag != "Player" && cDist < jumpThreshold && sprite.bounds.min.y > closest.GetComponent<SpriteRenderer>().bounds.max.y && !closest.GetComponent<Barrel>().hurdled) 
+        {
+            print("points");
+            closest.GetComponent<Barrel>().hurdled = true;
+            IncScore(100);
+        }
         decTimer -= Time.deltaTime;
         if (decTimer <= 0)
         {
@@ -151,6 +171,7 @@ public class PlayerController : MonoBehaviour
             if (to < 0)
             {
                 print("die");
+                deathMusic.Play();
                 SceneManager.LoadScene("BaseGame");
             }
             lifeText.text = "M\n" + lives.ToString();

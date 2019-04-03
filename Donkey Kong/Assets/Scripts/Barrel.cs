@@ -7,6 +7,7 @@ public class Barrel : MonoBehaviour
 	private Rigidbody2D rigid;
 	public float speed = 1;
 	public  int going = 1;
+    public bool hurdled = false;
     // Start is called before the first frame update
     void Start()
     {
