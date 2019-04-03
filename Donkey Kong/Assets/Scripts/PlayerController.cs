@@ -44,6 +44,9 @@ public class PlayerController : MonoBehaviour
     public AudioSource finalMusic;
     public AudioSource deathMusic;
     public ScoreDisplay scDisp;
+    public int pointsPerLife = 7000;
+    private int p = 0;
+    public AudioSource jumpSFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +67,10 @@ public class PlayerController : MonoBehaviour
         {
             highScore = score;
             highScoreText.text = score.ToString("TOP-000000");
+        }
+        if (score >= pointsPerLife * p) {
+            p++;
+            ModLives(1);
         }
     }
     public void Win(bool final)
@@ -152,6 +159,7 @@ public class PlayerController : MonoBehaviour
             rigid.velocity = new Vector2(rigid.velocity.x, jumpForce);
             jumpTimer = jumpTime;
             animator.SetInteger("State", 2);
+            jumpSFX.Play();
         }
         if (hasWhip && Input.GetKeyDown(whipKey))
         {

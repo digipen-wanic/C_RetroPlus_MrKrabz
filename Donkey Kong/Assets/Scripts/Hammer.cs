@@ -14,6 +14,7 @@ public class Hammer : MonoBehaviour
     public AudioSource stageMusic;
     public AudioSource hammerMusic;
     public ScoreDisplay scDisp;
+    public AudioSource destSFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,7 @@ public class Hammer : MonoBehaviour
     	print("collds");
         if (col.gameObject.tag == "Barrel" && enabled)
         {
+        	destSFX.Play();
         	print("hit");
         	player.IncScore(500);
             Destroy(col.gameObject);
