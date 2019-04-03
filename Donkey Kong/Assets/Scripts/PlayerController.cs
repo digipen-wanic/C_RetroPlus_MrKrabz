@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public KeyCode upKey;
     public KeyCode jumpKey;
     public KeyCode downKey;
+    public KeyCode whipKey;
     public float speed = 10;
     public float jumpTime = 1;
     public float jumpForce = 10;
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
     public float decTime = 3;
     private float decTimer = 0;
     public Animator hammerAnim;
+    public bool hasWhip = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -112,8 +114,11 @@ public class PlayerController : MonoBehaviour
             animator.SetInteger("State", 2);
 
         }
-        if (!canJump) {
+        if (hasWhip && Input.GetKeyDown(whipKey))
+        {
+
         }
+
     }
     public void ModLives(int to) {
         lives += to;

@@ -9,6 +9,8 @@ public class SelectMenu : MonoBehaviour {
     public KeyCode downKey;
     public KeyCode pickKey;
     public Text[] picks;
+    public float waitTime;
+    private float waitTimer;
     public float startTime;
     private float startTimer;
     private bool started = false;
@@ -17,10 +19,16 @@ public class SelectMenu : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         picks = this.gameObject.GetComponentsInChildren<Text>();
+        waitTimer = waitTime;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        waitTimer -= Time.deltaTime;
+        if (waitTimer <= 0)
+        {
+            SceneManager.LoadScene("Tutorial");
+        }
         if (started) {
             startTimer -= Time.deltaTime;
             if (startTimer <= 0) {
