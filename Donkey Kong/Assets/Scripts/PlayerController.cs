@@ -111,6 +111,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKey(this.leftKey))
         {
+            inLadder = false;
             Vector3 lScale = new Vector3(-1, 1, 1);
             this.sprite.flipX = false;
             hammerTransform.localScale = lScale;
@@ -124,6 +125,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetKey(this.rightKey))
         {
+            inLadder = false;
             Vector3 lScale = new Vector3(1, 1, 1);
             hammerTransform.localScale = lScale;
             this.sprite.flipX = true;
@@ -150,7 +152,6 @@ public class PlayerController : MonoBehaviour
             rigid.velocity = new Vector2(rigid.velocity.x, jumpForce);
             jumpTimer = jumpTime;
             animator.SetInteger("State", 2);
-
         }
         if (hasWhip && Input.GetKeyDown(whipKey))
         {
@@ -183,12 +184,17 @@ public class PlayerController : MonoBehaviour
     {
         if (col.gameObject.tag == "Ladder")
         {
+            rigid.gravityScale = 0.0f;
             if (Input.GetKey(upKey))
             {
+                rigid.transform.position = new Vector3(col.bounds.min.x, rigid.transform.position.y, -1);
+                inLadder = true;
                 this.rigid.velocity = new Vector2(rigid.velocity.x, climbForce);
             }
             else if (Input.GetKey(downKey))
             {
+                rigid.transform.position = new Vector3(col.bounds.min.x, rigid.transform.position.y, -1);
+                inLadder = true;
                 this.rigid.velocity = new Vector2(rigid.velocity.x, -climbForce);
             }
             else
@@ -204,6 +210,7 @@ public class PlayerController : MonoBehaviour
         {
             inLadder = false;
             rigid.velocity = new Vector2(rigid.velocity.x, 0);
+            rigid.gravityScale = 1.0f;
         }
     }
     void OnCollisionEnter2D(Collision2D collision)

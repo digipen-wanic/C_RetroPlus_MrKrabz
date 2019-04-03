@@ -3079,7 +3079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreTextPrefab: {fileID: 0}
-  time: 10
+  time: 1
 --- !u!1 &732420950
 GameObject:
   m_ObjectHideFlags: 0
@@ -9768,12 +9768,12 @@ PrefabInstance:
     - target: {fileID: 7033145849151987041, guid: 36affcba0a82ea4a7beb9101dcc90293,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.212
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 7033145849151987041, guid: 36affcba0a82ea4a7beb9101dcc90293,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.13
+      value: -1.72
       objectReference: {fileID: 0}
     - target: {fileID: 7033145849151987041, guid: 36affcba0a82ea4a7beb9101dcc90293,
         type: 3}

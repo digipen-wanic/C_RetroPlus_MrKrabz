@@ -1,0 +1,140 @@
+#+SETUPFILE: /home/nicohman/Org Files/org-sourcehut/sourcehut-remote.setup
+* Nico's Guide and TODO list for finishing Donkey Kong 
+  or, why merge conflicts should terrify you
+* Things for Frank to do 
+** Tweaks
+*** TODO Ladders
+    - [ ] Going down ladders
+      For this, just change the player's layer to one that doesn't collide with
+      platforms, then restore it.
+    - [ ] Barrels going down ladders
+      Similar to the player, but look at the fireball code for an example of how
+      to randomly pick whether they descend.
+    - [ ] Playing animation when ascending ladders
+** TODO Death animation
+   Mario needs to play a death animation
+** TODO Starting barrel throw animation 
+   Could also be done by Daron
+** TODO Keys 
+   Reassign the left, right, up, and down keys from WASD to the arrow keys
+** Plus Content 
+*** TODO Setting up next level
+    Once the main level is totally done, copy it and paste it, renaming it to
+    =PlusLevel.unity=. The player will now proceed to it after winning the game.
+*** TODO Setting up the enemies
+    - Drag the prefab =EnemyBarrel= onto the barrel prefab variable on Donkey
+      Kong. Open the prefab and set the enemy sprite to the new one.
+* Things for Frank or Jacob to do
+** TODO Adjust animation timing
+   - [ ] Oil tank burning
+   - [ ] Adjust Donkey Kong throw timing
+** TODO Fix ladder placement 
+   Need updated ladders from Frank that weren't pushed
+* Things for Jacob to do
+** TODO Adjust timers
+   - [ ] Time between fireball spawns
+   - [ ] Length of DK animation/Throw offset
+** TODO Adjust fireball spawn point 
+   Move the GameObject within the OilTank named FSpawnPoint
+** TODO Adjust main menu scaling
+   Adjust the camera size, not any other sizes
+** TODO Adjust fireball spawn time 
+   =Delay= on =OilTank=
+** TODO Add headers to all files 
+   Should be in the following format:
+#+BEGIN_SRC
+/*****************
+ * By AUTHORS 
+ * Purpose: DESCRIPTION
+*****************/
+#+END_SRC
+** TODO Make sure all animations play correctly
+* Things for me to do before I leave
+** TODO Fix fireball climbing
+** TODO Jump animation
+* Committing and push cheat sheet
+  Anything =like this= indicates a command to be typed into the Git Bash prompt.
+** If you don't already have it open: 
+   - Open it by typing Git Bash into the start menu
+   - =cd /c/Users/MYDIGIPENUSERNAME/Documents/c_retroplus_mrkrabz=
+** Once it is open:
+   - =git pull=
+     Here, if you see *merge conflicts* or *overwritten*, stop what you are
+     doing and:
+     - =git merge --abort=
+     - After finishing the normal commit, type =git pull= again and follow the
+       instructions [[*If you ever see the words *merge conflicts*][here]].
+   - =git add *=
+   - =git commit -m "COMMITMESSAGE\"=
+   - =git push=
+     Authenticate here with your GitHub username and password, pressing enter
+     after each one. Don't type into the web prompt with the logo, only the
+     plain text one.
+* Adjusting animation times
+  I've left some animation speed time adjustments. Here's how you do this:
+** If it's adjusting an animation's speed
+   - Find the animation in the project view
+   - Select it
+   - Hit Ctrl-6 to open the animation pane
+   - Drag each keyframe to match the right speed. The timestamps along the top
+     are in the format of: SECONDS:FRAMES. Check the mario run animation for an
+     example of an animation whose sprite changes every 6 frames.
+** If it's adjusting the timing of a script-based animation
+   Depending on the script, you should see a variable named =somethingTime=,
+   which controls how long before something happens.
+* If you ever see the words *merge conflicts* 
+  This is a very bad thing. Steps to fix:
+  Check the files listed as having merge conflicts. If one is a:
+    - .meta:
+      - Just delete the file.
+    - .unity:
+      - Allocate around 30 minutes for fixing this. This could be a doozy. You
+        may want to talk to Ryan, or possibly Blake, as he has some limited
+        experience with git.
+      - Type =git log=
+      - Find the hash of the most recent commit on your end. Copy it. It should
+        look like =da0e05d00c46ed3b15a4ca44a777e22860c70dcb=.
+      - Type =git checkout <HASH>=
+      - Type =git checkout -b merges=
+      - Type =git log=
+      - Find the most recent hash that says origin/master on it. Copy its hash.
+      - Type =git checkout <REMOTEHASH>=
+      - Open the scene in unity. Copy anything you want to keep from it.
+      - Type =git checkout merges=
+      - Open the scene. Paste in everything that should be kept.
+      - Save.
+      - Type =git add *=
+      - Type =git commit -m "Fix merge conflicts"=
+      - Type =git branch -d master=
+      - Type =git branch -m merges master=
+      - Type =git push --force=
+      - Berate *someone*.
+    - anything else:
+      - Open the files and manually delete all the weird-looking stuff that is
+        old and unwanted until it works again. Then, run:
+        - =git add *=
+        - =git commit -m "Merge branches"=
+        - =git push=
+    If it absolutely cannot be resolved, type =git merge --abort=
+* Final turn-in 
+  Build Settings
+  - Go to Edit>Project Settings>Player
+  - Make sure that:
+    - Default is Native Resolution is unchecked
+    - Default Screen Width and Height and 512 and 448 respectively
+    - Display Resolution Dialog is unchecked
+  Turn in both the compiled executable and the entire git repository, zipped by
+  right-clicking on it and hitting Send To>Compressed Archive
+* Other common issues 
+** If animations look weird
+   Add a 1pixel transparent border around every sprite in the spritesheet
+** If sprites are blurry 
+   Click on the sprite in project view, and change filtering mode to point.
+   Click apply.
+* Who to go to for help 
+  - Ryan
+  - For git issues, Blake might be able to help you. He's on one of the metroid
+    teams.
+  - If you absolutely need my help with something that I could answer over
+    discord without access to a full PC, I can respond until around 6AM Thursday
+    and after around 8AM Friday, but don't count on it.
