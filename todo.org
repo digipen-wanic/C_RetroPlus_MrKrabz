@@ -52,6 +52,11 @@
 * Things for me to do before I leave
 ** TODO Fix fireball climbing
 ** TODO Jump animation
+* Cloning the repo 
+  - Open git bash
+  - Type =cd /c/Users/MYDIGIPENUSERNAME/Documents=
+  - Type =git clone https://github.com/digipen-wanic/C_Retroplus_mrkrabz=
+  - Type =cd C_Retroplus_mrkrabz=
 * Committing and push cheat sheet
   Anything =like this= indicates a command to be typed into the Git Bash prompt.
 ** If you don't already have it open: 
