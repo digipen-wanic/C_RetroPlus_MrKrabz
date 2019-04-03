@@ -35,6 +35,7 @@ public class Hammer : MonoBehaviour
         if (col.gameObject.tag == "Barrel" && enabled)
         {
         	print("hit");
+        	player.IncScore(500);
             Destroy(col.gameObject);
         }
     }

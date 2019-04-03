@@ -27,6 +27,15 @@ public class PlayerController : MonoBehaviour
     private Hammer hammer;
     public SpriteRenderer hammerSprite;
     public Transform hammerTransform;
+    public int score = 0;
+    public Text scoreText;
+    public static int highScore = 0;
+    public Text highScoreText;
+    public Text bonusText;
+    public int bonusPoints = 5000;
+    public int decBonusBy = 100;
+    public float decTime = 3;
+    private float decTimer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,13 +45,29 @@ public class PlayerController : MonoBehaviour
         this.animator = GetComponent<Animator>();
         this.hammer = GetComponentInChildren<Hammer>();
         lifeText.text = "M\n"+lives.ToString();
+        decTimer = decTime;
         hammer.Disable();
     }
-
+    public void IncScore(int points) {
+        score += points;
+        scoreText.text = score.ToString("I-0000000");
+        if (score > highScore) {
+            highScore = score;
+            highScoreText.text = score.ToString("TOP-000000");
+        }
+    }
+    public void Win() {
+        IncScore(bonusPoints);
+    }
     // Update is called once per frame
     void Update()
     {
-
+        decTimer -= Time.deltaTime;
+        if (decTimer <= 0) {
+            bonusPoints -= decBonusBy;
+            bonusText.text = bonusPoints.ToString("0000");
+            decTimer = decTime;
+        }
         if (Input.GetKey(this.leftKey))
         {
             Vector3 lScale = new Vector3(-1,1,1);

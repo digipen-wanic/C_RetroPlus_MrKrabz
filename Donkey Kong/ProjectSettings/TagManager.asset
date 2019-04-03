@@ -8,6 +8,8 @@ TagManager:
   - Border
   - Ladder
   - Hammer
+  - PHammer
+  - Barrel
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - MarioHammer
+  - Barrel
   - 
   - 
   - 
