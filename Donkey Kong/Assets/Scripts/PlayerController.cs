@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
             bonusText.text = bonusPoints.ToString("0000");
             decTimer = decTime;
         }
+
         if (Input.GetKey(this.leftKey))
         {
             Vector3 lScale = new Vector3(-1,1,1);
@@ -97,6 +98,9 @@ public class PlayerController : MonoBehaviour
             canJump = false;
             rigid.velocity = new Vector2(rigid.velocity.x, jumpForce);
             jumpTimer = jumpTime;
+        }
+         if (!canJump) {
+            animator.SetInteger("State", 2);   
         }
     }
     public void ModLives(int to) {
