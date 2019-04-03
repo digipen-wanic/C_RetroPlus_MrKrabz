@@ -12,6 +12,7 @@ public class OilTank : MonoBehaviour
     public float bTimer = 0;
     public GameObject spawnPoint;
     private Animator animator;
+    private bool extra = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class OilTank : MonoBehaviour
         dTimer -= Time.deltaTime;
         if (dTimer <=0 && !burning) {
             Burn();
+            SpawnFire();
         }
         if (burning)
         {
@@ -32,8 +34,7 @@ public class OilTank : MonoBehaviour
             if (bTimer <= 0)
             {
                 bTimer = bInterval;
-                Fireball fire = Instantiate<Fireball>(fireballPrefab);
-                fire.transform.position = spawnPoint.transform.position;
+
             }
         }
     }
@@ -42,5 +43,16 @@ public class OilTank : MonoBehaviour
         burning = true;
         bTimer = bInterval;
         animator.SetBool("Burning", true);
+    }
+    void SpawnFire() {
+       Fireball fire = Instantiate<Fireball>(fireballPrefab);
+       fire.transform.position = spawnPoint.transform.position;
+    }
+    void OnCollisionEnter2D(Collision2D col) {
+        if (col.collider.gameObject.tag == "Barrel" && !extra) {
+            Destroy(col.gameObject);
+            SpawnFire();
+            extra = true;
+        }
     }
 }

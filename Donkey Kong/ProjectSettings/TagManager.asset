@@ -14,6 +14,8 @@ TagManager:
   - Enemy
   - Whip
   - WinCollide
+  - KillBarrels
+  - OilTank
   layers:
   - Default
   - TransparentFX
