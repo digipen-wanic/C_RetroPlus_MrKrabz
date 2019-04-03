@@ -13,6 +13,7 @@ public class Hammer : MonoBehaviour
     private float hTimer = 0;
     public AudioSource stageMusic;
     public AudioSource hammerMusic;
+    public ScoreDisplay scDisp;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +38,7 @@ public class Hammer : MonoBehaviour
         	print("hit");
         	player.IncScore(500);
             Destroy(col.gameObject);
+            scDisp.DisplayScore(500, transform.position);
         }
     }
     public void Enable()

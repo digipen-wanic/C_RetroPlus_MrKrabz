@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource winMusic;
     public AudioSource finalMusic;
     public AudioSource deathMusic;
+    public ScoreDisplay scDisp;
     // Start is called before the first frame update
     void Start()
     {
@@ -98,6 +99,7 @@ public class PlayerController : MonoBehaviour
         {
             print("points");
             closest.GetComponent<Barrel>().hurdled = true;
+
             IncScore(100);
         }
         decTimer -= Time.deltaTime;

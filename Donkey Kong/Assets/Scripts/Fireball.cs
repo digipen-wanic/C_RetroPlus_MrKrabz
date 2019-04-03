@@ -66,6 +66,10 @@ public class Fireball : MonoBehaviour
         {
             blockedAsc = false;
         } 
+        if (col.gameObject.tag == "Ladder" && ascending)
+        {
+            ascending = false;
+        }
     }
     void OnCollisionLeave2D(Collision2D leave)
     {
@@ -76,7 +80,7 @@ public class Fireball : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D colt)
     {
-        if (colt.gameObject.tag == "Ladder")
+        if (colt.gameObject.tag == "Ladder" && colt.gameObject.gameObject.GetComponentInParent<BoxCollider2D>().bounds.min.y >= rigid.transform.position.y)
         {
             float doe = Random.value;
             if (doe <= chanceUp)
