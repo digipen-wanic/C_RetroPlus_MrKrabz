@@ -1,0 +1,247 @@
+[33mcommit a7e6f4309e69f520575ce4b435aafba352589beb[m
+Merge: 9dd6413 5f929fb
+Author: Daron Walker <daron.walker@dit1932us.DIGIPEN.EDU>
+Date:   Tue Apr 2 15:39:07 2019 -0700
+
+    Merge branch 'tutorial' of https://github.com/digipen-wanic/c_retroplus_mrkrabz into tutorial
+
+[33mcommit 5f929fbaeac9bb4d0f933a6b921ac0ffae326eb8[m
+Merge: e32ecef 092d090
+Author: Daron Walker <daron.walker@dit1987us.DIGIPEN.EDU>
+Date:   Tue Apr 2 12:44:43 2019 -0700
+
+    merging master to tutorial
+
+[33mcommit 092d0908ce7e600d8a8c4da5957f643d8a384054[m
+Author: nicohman <nicohman@demenses.net>
+Date:   Mon Apr 1 19:55:07 2019 -0700
+
+    Add hammer logic
+
+[33mcommit b7e716b09045d961b6aa9fa5de6b00579ec42094[m
+Author: adithiarun06 <adithiarun06@gmail.com>
+Date:   Mon Apr 1 17:49:37 2019 -0700
+
+    replacing title screen
+
+[33mcommit 9dd6413efe54a8d5aa328ab168d46e863a705100[m
+Author: Daron Walker <daron.walker@dit1932us.DIGIPEN.EDU>
+Date:   Mon Apr 1 17:48:04 2019 -0700
+
+    Adding missing sprites
+
+[33mcommit 488b64a067d5d940f88f87e1c6a497bd25895ae4[m
+Author: adithiarun06 <adithiarun06@gmail.com>
+Date:   Mon Apr 1 17:23:49 2019 -0700
+
+    add destroyed animation and title screen
+
+[33mcommit b432f199e0dd894afdc02ef7e5768c959f63da51[m
+Author: Nico Hickman <nicohman@demenses.net>
+Date:   Mon Apr 1 17:03:49 2019 -0700
+
+    Add main menu functionality
+
+[33mcommit 01a47b2c2c862b26dec846aea963483a7a021c37[m
+Author: Nico Hickman <nicohman@demenses.net>
+Date:   Mon Apr 1 16:42:33 2019 -0700
+
+    Fix walking timing & add game start sound
+
+[33mcommit e32ecef2fc709385022111a574fdf1669600d429[m
+Author: Daron Walker <daron.walker@dit1987us.DIGIPEN.EDU>
+Date:   Mon Apr 1 15:28:14 2019 -0700
+
+    Add to tutorial animation
+
+[33mcommit 3948c34f93e4173a1bf9eb561f3e9fdf139330c9[m
+Author: nicohman <nicohman@demenses.net>
+Date:   Sun Mar 31 12:17:22 2019 -0700
+
+    Add basic barrel spawner
+
+[33mcommit 06422238d946df2aa2fa0800a9494a52607b346c[m
+Author: nicohman <nicohman@demenses.net>
+Date:   Sat Mar 30 14:36:16 2019 -0700
+
+    Add basic game over screen
+
+[33mcommit fdca2300596e425d43af16be97dc9e1ff7075a2f[m
+Author: nicohman <nicohman@demenses.net>
+Date:   Sat Mar 30 12:24:08 2019 -0700
+
+    Add basic ladder climbing functionality
+
+[33mcommit 6303bbaf5410fa515e903688f0e9e3ada217489b[m
+Merge: a5d22f4 01add6f
+Author: Frank Bartkus <frank.bartkus@dit1926us.DIGIPEN.EDU>
+Date:   Fri Mar 29 17:55:38 2019 -0700
+
+    Merge branch 'master' of https://github.com/digipen-wanic/c_retroplus_mrkrabz
+
+[33mcommit a5d22f4f71470a0f3e729f78bf03acf2ba22b5fa[m
+Author: Frank Bartkus <frank.bartkus@dit1926us.DIGIPEN.EDU>
+Date:   Fri Mar 29 17:55:29 2019 -0700
+
+    Add a ladder
+
+[33mcommit 01add6f86c0aeabfc1f85cd3a2f8e98bc5bab287[m
+Merge: 5f511ba 1236996
+Author: Nico Hickman <nicohman@demenses.net>
+Date:   Fri Mar 29 17:46:32 2019 -0700
+
+    Merge branch 'master' of https://github.com/digipen-wanic/C_RetroPlus_MrKrabz
+
+[33mcommit 5f511bacc52fb2751cbe5996a8f02eed74e42f5e[m
+Author: Nico Hickman <nicohman@demenses.net>
+Date:   Fri Mar 29 17:46:11 2019 -0700
+
+    Add Life display script
+
+[33mcommit 1236996699dfdf2a99e6fb7f31cc0fbc622381cb[m
+Author: adithiarun06 <adithiarun06@gmail.com>
+Date:   Fri Mar 29 17:39:51 2019 -0700
+
+    added pauline sprite and smaller ladder
+
+[33mcommit 6e035ba8ad8093f4daa6396c0e927f623bd18230[m
+Author: Nico Hickman <nicohman@demenses.net>
+Date:   Fri Mar 29 17:30:16 2019 -0700
+
+    Add basic ladder format & background reference image
+
+[33mcommit dae933337853aef8b989447e350279e342073e44[m
+Author: Derek Knight <derekknight515@gmail.com>
+Date:   Fri Mar 29 17:23:43 2019 -0700
+
+    Add music
+
+[33mcommit 6d6655154aa57207935311e4543857f328561f91[m
+Merge: 0dd3f5c a8cc18f
+Author: adithiarun06 <adithiarun06@gmail.com>
+Date:   Fri Mar 29 17:02:22 2019 -0700
+
+    Merge branch 'master' of https://github.com/digipen-wanic/C_RetroPlus_MrKrabz
+
+[33mcommit 0dd3f5cafe15876b72bcbafe0c81ad43bbfcde57[m
+Author: adithiarun06 <adithiarun06@gmail.com>
+Date:   Fri Mar 29 17:02:18 2019 -0700
+
+    new ladder
+
+[33mcommit a8cc18f74c29a17b148550ef18afff4cf21e030d[m
+Author: Frank Bartkus <frank.bartkus@dit1926us.DIGIPEN.EDU>
+Date:   Fri Mar 29 16:44:58 2019 -0700
+
+    Fix platform placement
+
+[33mcommit 8e99de11337746e5d61b4ca0fd45da19439391bc[m
+Author: Nico Hickman <nicohman@demenses.net>
+Date:   Fri Mar 29 16:38:55 2019 -0700
+
+    Add basic lives and oil tank
+
+[33mcommit 4e7bf92b4af77ad10b243bcd0b5098d7647a4f46[m
+Author: Nico Hickman <nicohman@demenses.net>
+Date:   Fri Mar 29 16:28:04 2019 -0700
+
+    Add basic barrel and fix platform collisions
+
+[33mcommit 3c8994d66098170398c863119f1ea135f375bbf4[m
+Author: adithiarun06 <adithiarun06@gmail.com>
+Date:   Fri Mar 29 16:05:34 2019 -0700
+
+    reorganizing "obstacles" folder
+
+[33mcommit 1b87e2ac48e9e2377619d6f23f41404db437d9b0[m
+Author: Daron Walker <daron.walker@dit1932us.DIGIPEN.EDU>
+Date:   Fri Mar 29 15:39:04 2019 -0700
+
+    Add Barrel sprites
+
+[33mcommit bca52ebc83b386df6e0b9a2b0889b0bad8665f0a[m
+Merge: 05948c3 dacf132
+Author: Daron Walker <daron.walker@dit1932us.DIGIPEN.EDU>
+Date:   Fri Mar 29 15:38:10 2019 -0700
+
+    Merge branch 'master' of https://github.com/digipen-wanic/c_retroplus_mrkrabz
+
+[33mcommit 235e98bf638ea39677c6f9558889c4990dcb5a0e[m
+Author: Daron Walker <daron.walker@dit1987us.DIGIPEN.EDU>
+Date:   Fri Mar 29 14:22:18 2019 -0700
+
+    created a new scene for the opening animation and aded some of the sprites for mario movement
+
+[33mcommit dacf1328a9960310fd915d212f91b58296b4fc74[m
+Author: nicohman <nicohman@demenses.net>
+Date:   Fri Mar 29 13:47:03 2019 -0700
+
+    Add walking animation, allow mario to run up slopes
+
+[33mcommit 34403263345d35fa3b9c7eaa1b57d0586c62917a[m
+Author: Frank Bartkus <frank.bartkus@dit1926us.DIGIPEN.EDU>
+Date:   Thu Mar 28 18:00:02 2019 -0700
+
+    Place all platforms
+
+[33mcommit 5260ebdb913052b3eaedbe74f118dadfe14397ed[m
+Merge: 9c7943e 19b3d79
+Author: Emmanuel Nunez <emmanuel.nunez@dit1924us.DIGIPEN.EDU>
+Date:   Thu Mar 28 17:55:01 2019 -0700
+
+    Merge branch 'master' of https://github.com/digipen-wanic/c_retroplus_mrkrabz
+
+[33mcommit 9c7943e4484a84a4351820ec91571c717811d1ef[m
+Author: Emmanuel Nunez <emmanuel.nunez@dit1924us.DIGIPEN.EDU>
+Date:   Thu Mar 28 17:54:26 2019 -0700
+
+    Add obstacles
+
+[33mcommit 19b3d79901c9ffef1b8cbcdf1ba7ad31efed2332[m
+Merge: 0fbc24e 5763bcf
+Author: Nico Hickman <nicohman@demenses.net>
+Date:   Thu Mar 28 17:02:09 2019 -0700
+
+    Merge branch 'master' of https://github.com/digipen-wanic/C_RetroPlus_MrKrabz
+
+[33mcommit 0fbc24e5c1e8e140ce01c4cfa8a165dcb2788e51[m
+Author: Nico Hickman <nicohman@demenses.net>
+Date:   Thu Mar 28 17:01:49 2019 -0700
+
+    Add basic platforms and playercontroller
+
+[33mcommit 5763bcf668a502400798cece9d624b3dd824c2f3[m
+Author: adithiarun06 <adithiarun06@gmail.com>
+Date:   Thu Mar 28 17:00:48 2019 -0700
+
+    reorganizing (putting platform into folder)
+
+[33mcommit 05948c32664201b2b44b07fb93628b3645ba10b7[m
+Author: Daron Walker <daron.walker@dit1932us.DIGIPEN.EDU>
+Date:   Thu Mar 28 16:53:03 2019 -0700
+
+    Update jump and land sprites
+
+[33mcommit 0750c0a412408122852fc66e6b3811067665f59a[m
+Author: Emmanuel Nunez <emmanuel.nunez@dit1924us.DIGIPEN.EDU>
+Date:   Thu Mar 28 16:34:36 2019 -0700
+
+    Add platform sprite
+
+[33mcommit a85d3b74bdeab7f18d5b354d3ee8d096c9510139[m
+Author: Daron Walker <daron.walker@dit1932us.DIGIPEN.EDU>
+Date:   Thu Mar 28 16:12:51 2019 -0700
+
+    Add Mario jump and run sprites
+
+[33mcommit 14a7e79a6079cdac5ce67a68b7229325268a43e6[m
+Author: Nico Hickman <nicohman@demenses.net>
+Date:   Wed Mar 27 16:39:06 2019 -0700
+
+    Add .gitignore and base 2D project
+
+[33mcommit 82f9724b787e087a9dec301859c4b27953ea395c[m
+Author: rscheppler <39319394+rscheppler@users.noreply.github.com>
+Date:   Tue Mar 26 13:39:22 2019 -0700
+
+    Initial Commit
