@@ -153,7 +153,7 @@ public class PlayerController : MonoBehaviour
             }
 
         }
-        if (Input.GetKeyDown(this.jumpKey) && canJump)
+        if (Input.GetKeyDown(this.jumpKey) && canJump && !hammer.enabled)
         {
             canJump = false;
             rigid.velocity = new Vector2(rigid.velocity.x, jumpForce);
@@ -190,7 +190,7 @@ public class PlayerController : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Ladder")
+        if (col.gameObject.tag == "Ladder" && !hammer.enabled)
         {
             rigid.gravityScale = 0.0f;
             if (Input.GetKey(upKey))
