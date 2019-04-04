@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*****************
+ * By Nico
+ * Purpose: fireball sprite
+*****************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

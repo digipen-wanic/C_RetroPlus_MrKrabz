@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*****************
+ * By Nico
+ * Purpose: script for the hammers
+*****************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

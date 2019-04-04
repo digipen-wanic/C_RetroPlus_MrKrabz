@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*****************
+ * By Nico
+ * Purpose: a timer
+*****************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
