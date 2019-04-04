@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnInterval: 0.5
   ascendSpeed: 1
-  speed: 2
+  speed: 1
   chanceUp: 1
   ascending: 0
 --- !u!50 &7033145849151986972
