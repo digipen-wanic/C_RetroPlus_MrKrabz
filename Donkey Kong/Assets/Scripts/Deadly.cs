@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*****************
+ * By Nico
+ * Purpose: changes lives
+*****************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

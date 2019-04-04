@@ -1195,6 +1195,7 @@ MonoBehaviour:
   downKey: 274
   pickKey: 13
   picks: []
+  waitTime: 15
   startTime: 5
   selectMusic: {fileID: 111059225}
   mainMusic: {fileID: 388039817}

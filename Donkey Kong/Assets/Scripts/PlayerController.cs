@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*****************
+ * By Nico
+ * Purpose: Player controller for moving and animations
+*****************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
