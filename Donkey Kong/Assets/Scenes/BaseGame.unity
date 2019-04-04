@@ -9671,9 +9671,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c6dc5fbbb4437b3afb08d9f3471c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnInterval: 3
+  spawnInterval: 4.65
   waitInterval: 3
-  throwTime: 1
+  throwTime: 0.65
   barrelPrefab: {fileID: 2077061450869358342, guid: be8aa75d0a86e5a20947b9ad0233e3dd,
     type: 3}
   spawnTimer: 0
@@ -13077,6 +13077,7 @@ MonoBehaviour:
   deathMusic: {fileID: 1049386401}
   scDisp: {fileID: 732219667}
   pointsPerLife: 7000
+  jumpSFX: {fileID: 981326507}
 --- !u!212 &1714573365
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16282,7 +16283,7 @@ PrefabInstance:
     - target: {fileID: 7033145849151987041, guid: 36affcba0a82ea4a7beb9101dcc90293,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.91
+      value: 4.12
       objectReference: {fileID: 0}
     - target: {fileID: 7033145849151987041, guid: 36affcba0a82ea4a7beb9101dcc90293,
         type: 3}
