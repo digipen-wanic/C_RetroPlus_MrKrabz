@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   going: 1
+  hurdled: 0
 --- !u!114 &7215386353646150583
 MonoBehaviour:
   m_ObjectHideFlags: 0

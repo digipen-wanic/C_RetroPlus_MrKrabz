@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
     public int pointsPerLife = 7000;
     private int p = 0;
     public AudioSource jumpSFX;
+    public AudioSource footstepSFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -122,15 +123,21 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKey(this.leftKey))
         {
+            //footstep test sound
+            footstepSFX.Play();
             inLadder = false;
             Vector3 lScale = new Vector3(-1, 1, 1);
+            
             this.sprite.flipX = false;
             hammerTransform.localScale = lScale;
 
             rigid.velocity = new Vector2(-speed, rigid.velocity.y);
+            
             if (canJump)
             {
                 animator.SetInteger("State", 1);
+              
+
                 hammerAnim.SetInteger("State", 1);
             }
         }
@@ -138,13 +145,18 @@ public class PlayerController : MonoBehaviour
         {
             inLadder = false;
             Vector3 lScale = new Vector3(1, 1, 1);
+            //foostep test sound
+            footstepSFX.Play();
             hammerTransform.localScale = lScale;
             this.sprite.flipX = true;
+
             rigid.velocity = new Vector2(speed, rigid.velocity.y);
+               
             if (canJump)
             {
                 animator.SetInteger("State", 1);
                 hammerAnim.SetInteger("State", 1);
+
             }
         }
         else
